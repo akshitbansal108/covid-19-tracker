@@ -2,6 +2,7 @@
   <main v-if="!loading">
     <Title :title="title" :dataDate="dataDate" />
     <Body :stats="stats" />
+    <SelectCountry :countries="countries" />
   </main>
   <main class="flex flex-col align-center justify-center text-center" v-else>
     <div class="text-gray-500 text-3xl mt-10 mb-6">
@@ -15,12 +16,14 @@
 <script>
 import Title from "@/components/Title";
 import Body from "@/components/Body";
+import SelectCountry from "@/components/SelectCountry";
 
 export default {
   name: "Home",
   components: {
     Title,
     Body,
+    SelectCountry,
   },
   data() {
     return {
